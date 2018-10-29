@@ -1,7 +1,7 @@
 package com.gae.scaffolder.plugin;
 
 import android.util.Log;
-import com.gae.scaffolder.plugin.FCMPlugin;
+// import com.gae.scaffolder.plugin.FCMPlugin;
 // import FCMPlugin;
 
 import com.google.firebase.iid.FirebaseInstanceId;
@@ -18,6 +18,7 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
     public void onTokenRefresh(){
         // Get updated InstanceID token.
         String refreshedToken = FirebaseInstanceId.getInstance().getToken();
+	System.out.println("Refreshed token: " + refreshedToken);
         Log.d(TAG, "Refreshed token: " + refreshedToken);
 		FCMPlugin.sendTokenRefresh( refreshedToken );
 
