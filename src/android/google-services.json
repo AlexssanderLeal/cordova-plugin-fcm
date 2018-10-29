@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1078867379820",
+    "firebase_url": "https://andacco-dc584.firebaseio.com",
+    "project_id": "andacco-dc584",
+    "storage_bucket": "andacco-dc584.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078867379820:android:1b167d888ab71abd",
+        "android_client_info": {
+          "package_name": "app.andacco.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1078867379820-dgfk686pktn91eb2gu8kqlkber0jvilf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhE18AioWMpnwiuyKV664_Z01hek4gz6I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
