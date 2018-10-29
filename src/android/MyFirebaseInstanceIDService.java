@@ -18,9 +18,9 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
     public void onTokenRefresh(){
         // Get updated InstanceID token.
         String refreshedToken = FirebaseInstanceId.getInstance().getToken();
-	System.out.println("Refreshed token: " + refreshedToken); --stacktrace
-        Log.d(TAG, "Refreshed token: " + refreshedToken); --stacktrace
-		FCMPlugin.sendTokenRefresh( refreshedToken ); --stacktrace
+	System.out.println("Refreshed token: " + refreshedToken); 
+        Log.d(TAG, "Refreshed token: " + refreshedToken); 
+		// FCMPlugin.sendTokenRefresh( refreshedToken ); 
 
         // TODO: Implement this method to send any registration to your app's servers.
         //sendRegistrationToServer(refreshedToken);
