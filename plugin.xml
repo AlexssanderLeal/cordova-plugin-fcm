@@ -75,7 +75,7 @@
 		<source-file src="src/android/MyFirebaseInstanceIDService.java" target-dir="src/com/gae/scaffolder/plugin" />
 		<source-file src="src/android/FCMPluginActivity.java" target-dir="src/com/gae/scaffolder/plugin" />
 	    
-	    <source-file src="src/android/google-services.json" />
+	    <source-file src="src/android/google-services.json" target="Resources/google-services.json"/>
     </platform>
 	
     <!-- IOS CONFIGURATION -->
