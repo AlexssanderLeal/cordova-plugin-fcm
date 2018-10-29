@@ -11,7 +11,8 @@ import com.google.firebase.iid.FirebaseInstanceIdService;
  */
 public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
 
-    private static final String TAG = "FCMPlugin";
+    // private static final String TAG = "FCMPlugin";
+       FCMPlugin FCMPlugin = new FCMPlugin();
 
     @Override
     public void onTokenRefresh(){
