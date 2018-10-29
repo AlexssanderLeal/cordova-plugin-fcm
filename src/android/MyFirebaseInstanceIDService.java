@@ -1,8 +1,7 @@
-package com.gae.scaffolder.plugin;
+package com.gae.scaffolder.plugin.*;
 
 import android.util.Log;
-import com.gae.scaffolder.plugin.FCMPlugin;
-// import android.FCMPlugin;
+import FCMPlugin;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
