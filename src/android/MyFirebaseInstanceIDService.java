@@ -1,4 +1,4 @@
-package com.gae.scaffolder.plugin.*;
+package com.gae.scaffolder.plugin;
 
 import android.util.Log;
 import FCMPlugin;
