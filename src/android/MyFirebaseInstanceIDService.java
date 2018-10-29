@@ -1,6 +1,7 @@
 package com.gae.scaffolder.plugin;
 
 import android.util.Log;
+import com.gae.scaffolder.plugin.FCMPlugin;
 // import FCMPlugin;
 
 import com.google.firebase.iid.FirebaseInstanceId;
@@ -11,8 +12,7 @@ import com.google.firebase.iid.FirebaseInstanceIdService;
  */
 public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
 
-    // private static final String TAG = "FCMPlugin";
-       FCMPlugin FCMPlugin = new FCMPlugin();
+    private static final String TAG = "FCMPlugin";
 
     @Override
     public void onTokenRefresh(){
