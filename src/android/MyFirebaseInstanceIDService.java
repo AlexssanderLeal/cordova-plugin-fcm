@@ -1,6 +1,7 @@
 package com.gae.scaffolder.plugin;
 
 import android.util.Log;
+import android.FCMPlugin;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
@@ -10,14 +11,15 @@ import com.google.firebase.iid.FirebaseInstanceIdService;
  */
 public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
 
-    // private static final String TAG = "FCMPlugin";
-    declare var FCMPlugin: any;
+    private static final String TAG = "FCMPlugin";
 
     @Override
     public void onTokenRefresh(){
         // Get updated InstanceID token.
         String refreshedToken = FirebaseInstanceId.getInstance().getToken();
         Log.d(TAG, "Refreshed token: " + refreshedToken);
+	    	system.out.println("AQUI");
+	    	system.out.println(FCMPlugin);
 		FCMPlugin.sendTokenRefresh( refreshedToken );
 
         // TODO: Implement this method to send any registration to your app's servers.
