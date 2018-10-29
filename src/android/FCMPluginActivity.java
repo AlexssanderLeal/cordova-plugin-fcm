@@ -45,6 +45,30 @@ public class FCMPluginActivity extends Activity {
 
         forceMainActivityReload();
     }
+	
+    	public static void sendPushPayload(Map<String, Object> payload) {
+		Log.d(TAG, "==> FCMPlugin sendPushPayload");
+		Log.d(TAG, "\tnotificationCallBackReady: " + notificationCallBackReady);
+		Log.d(TAG, "\tgWebView: " + gWebView);
+	    try {
+		    JSONObject jo = new JSONObject();
+			for (String key : payload.keySet()) {
+			    jo.put(key, payload.get(key));
+				Log.d(TAG, "\tpayload: " + key + " => " + payload.get(key));
+	    }
+			String callBack = "javascript:" + notificationCallBack + "(" + jo.toString() + ")";
+			if(notificationCallBackReady && gWebView != null){
+				Log.d(TAG, "\tSent PUSH to view: " + callBack);
+				gWebView.sendJavascript(callBack);
+			}else {
+				Log.d(TAG, "\tView not ready. SAVED NOTIFICATION: " + callBack);
+				lastPush = payload;
+			}
+		} catch (Exception e) {
+			Log.d(TAG, "\tERROR sendPushToView. SAVED NOTIFICATION: " + e.getMessage());
+			lastPush = payload;
+		}
+	}
 
     private void forceMainActivityReload() {
         PackageManager pm = getPackageManager();
